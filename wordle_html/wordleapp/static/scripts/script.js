@@ -7,12 +7,48 @@ function isIn(char, superString) {
     }
     return false
 }
+const color_code = {
+    1 : "#787c7f",
+    2 : "#c8b653",
+    3 : "#6ca965"
+}
 
 $(document).ready(function() {
     var keypressed = false;
     var guesses = 0;
     var cur_column = 0;
     var current_guess = [];
+
+    function checkResultHandle(result) {
+        let isWord = result["isAWord"];
+        let feedback = result["guessFeedback"];
+        let isCorrectWord = result["correctWord"];
+
+        // alert(isWord);
+        // alert(JSON.stringify(result));
+        if (!isWord) {
+            alert("not a word");
+            return
+        }
+
+        for (let i=0; i<5; i++) {
+            setTimeout(function(i) {
+                // alert(feedback[i]);
+                let square = document.getElementById("main").children[(guesses * 5) + i];
+                square.style.backgroundColor = color_code[feedback[i]];
+
+                square.classList.add("reveal");
+                // square.style.border = `0.2rem solid ${color_code[feedback[i]]}`;
+            }, 500);
+            
+        }
+
+    }
+
+    function yes(i) {
+        // setTimeout(500 * i, );
+    }
+
     $(document).on("keydown", function(e) {
         // alert(e.key);
         if (isIn(e.key, alphabet)) {
@@ -40,15 +76,21 @@ $(document).ready(function() {
             }
                 
         } else if (e.key == "Enter") {
-            alert(JSON.stringify(current_guess));
+            // alert(JSON.stringify(current_guess));
+            let data = JSON.stringify(current_guess)
             $.ajax({
-                type: "POST",
+                method: "POST",
                 url: "/check_guess",
-                dataType: "text",
-                data: JSON.stringify(current_guess),
-                success: checkResultHandle(result)
+                contentType: "application/json",
+                dataType: "json",
+                data: data,
+                success: (result)=>{checkResultHandle(result)}
             });
+
+            alert("ajax fired up");
         }
         keypressed = true;
     });
+
+    
 });
