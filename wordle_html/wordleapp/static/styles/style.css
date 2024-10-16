@@ -9,6 +9,9 @@ html, body {
     --bgcol: #111;
     --bordercol: #333;
     --bordercolselect: #666;
+    --green: #538d4e;
+    --yellow: #b59f3b;
+    --grey: #3a3a3c; 
     --gap: 0.3rem;
 }
 
@@ -40,10 +43,26 @@ h1 {
     color: #fff;
     background-color: var(--bgcol);
     border: 0.2rem solid var(--bordercol);
-    font-size: 2em;
-    font-weight: bold;
+    font-size: 2.2em;
+    font-weight: bolder;
     justify-content: center;
     align-items: center;
+    transition: 0.2s;
+}
+
+.correct {
+    background-color: var(--green);
+    border-color: var(--green);
+}
+
+.present {
+    background-color: var(--yellow);
+    border-color: var(--yellow);
+}
+
+.absent {
+    background-color: var(--grey);
+    border-color: var(--grey);
 }
 
 @keyframes select {
@@ -70,15 +89,19 @@ h1 {
 
 @keyframes reveal {
     0% {
-        transform: rotateY(0deg);
+        transform: rotateX(0deg);
+        /* border-color: var(--bordercolselect); */
+    }
+
+    25% {
     }
 
     50% {
-        transform: rotateY(90deg);
+        transform: rotateX(90deg);
     }
 
     100% {
-        transform: rotateY(0deg);
+        transform: rotateX(0deg);
     }
 }
 
@@ -88,3 +111,63 @@ h1 {
     animation-timing-function: ease;
     animation-fill-mode: both;
 }
+
+@keyframes shimmy {
+    25% {
+        transform: translateX(-10%);
+    }
+
+    50% {
+        transform: translateX(10%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+.not-word {
+    animation-name: shimmy;
+    animation-duration: 0.2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+    border-color: var(--bordercolselect);
+}
+/* .reveal1 {
+    animation-name: reveal;
+    animation-duration: 0.7s;
+    animation-timing-function: ease;
+    animation-fill-mode: both;
+}
+
+.reveal2 {
+    animation-name: reveal;
+    animation-duration: 0.7s;
+    animation-delay: 0.5s;
+    animation-timing-function: ease;
+    animation-fill-mode: both;
+}
+
+.reveal3 {
+    animation-name: reveal;
+    animation-duration: 0.7s;
+    animation-delay: 1.0s;
+    animation-timing-function: ease;
+    animation-fill-mode: both;
+}
+
+.reveal4 {
+    animation-name: reveal;
+    animation-duration: 0.7s;
+    animation-delay: 1.5s;
+    animation-timing-function: ease;
+    animation-fill-mode: both;
+}
+
+.reveal5 {
+    animation-name: reveal;
+    animation-duration: 0.7s;
+    animation-delay: 2.0s;
+    animation-timing-function: ease;
+    animation-fill-mode: both;
+} */
