@@ -1,7 +1,11 @@
 {% extends "layout.html" %}
 
 {% block main %}
-<center><h1>Yes</h1></center>
+<center><h1>No Words</h1></center>
+<div id="popup-wrapper" class="popup-wrapper">
+
+</div>
+
 <div class="main-container">
     <div class="game-grid" id="main">
         <div class="game-square"></div>
@@ -35,6 +39,46 @@
         <div class="game-square"></div>
         <div class="game-square"></div>
     </div>
+</div>
+
+<div class="keyboard-wrapper" id="keyboard">
+    <div id="row-1" class="keyboard-row">
+        <div class="key" id="Q" keyval="Q">Q</div>
+        <div class="key" id="W" keyval="W">W</div>
+        <div class="key" id="E" keyval="E">E</div>
+        <div class="key" id="R" keyval="R">R</div>
+        <div class="key" id="T" keyval="T">T</div>
+        <div class="key" id="Y" keyval="Y">Y</div>
+        <div class="key" id="U" keyval="U">U</div>
+        <div class="key" id="I" keyval="I">I</div>
+        <div class="key" id="O" keyval="O">O</div>
+        <div class="key" id="P" keyval="P">P</div>
+    </div>
+
+    <div id="row-2" class="keyboard-row">
+        <div class="key" id="A" keyval="A">A</div>
+        <div class="key" id="S" keyval="S">S</div>
+        <div class="key" id="D" keyval="D">D</div>
+        <div class="key" id="F" keyval="F">F</div>
+        <div class="key" id="G" keyval="G">G</div>
+        <div class="key" id="H" keyval="H">H</div>
+        <div class="key" id="J" keyval="J">J</div>
+        <div class="key" id="K" keyval="K">K</div>
+        <div class="key" id="L" keyval="L">L</div>
+    </div>
+
+    <div id="row-3" class="keyboard-row">
+        <div class="key special-key" keyval="Enter">Enter</div>
+        <div class="key" id="Z" keyval="Z">Z</div>
+        <div class="key" id="X" keyval="X">X</div>
+        <div class="key" id="C" keyval="C">C</div>
+        <div class="key" id="V" keyval="V">V</div>
+        <div class="key" id="B" keyval="B">B</div>
+        <div class="key" id="N" keyval="N">N</div>
+        <div class="key" id="M" keyval="M">M</div>
+        <div class="key special-key" keyval="Backspace"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24" width="20" class="game-icon" data-testid="icon-backspace"><path fill="white" d="M22 3H7c-.69 0-1.23.35-1.59.88L0 12l5.41 8.11c.36.53.9.89 1.59.89h15c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H7.07L2.4 12l4.66-7H22v14zm-11.59-2L14 13.41 17.59 17 19 15.59 15.41 12 19 8.41 17.59 7 14 10.59 10.41 7 9 8.41 12.59 12 9 15.59z"></path></svg></div>
+    </div>
+
 </div>
 
     

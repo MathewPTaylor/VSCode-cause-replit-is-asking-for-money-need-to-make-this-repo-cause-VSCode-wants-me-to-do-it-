@@ -1,7 +1,7 @@
-from wordleapp import app
+from wordleapp import app, daily_word
 from flask import render_template, request, url_for
 import json
-import wordleapp.wordcheck as Wordle
+import wordleapp.wordcheck as WordleCheck
 
 @app.route("/")
 def index():
@@ -23,10 +23,10 @@ def check_guess():
     guess = request.get_json()
 
     # checking if the guess is a word
-    isWord = Wordle.WordleCheck.in_allowed_words("".join(guess))
+    isWord = WordleCheck.WordleCheck.in_allowed_words("".join(guess))
 
     # comparing between guess and daily word
-    comparison = Wordle.WordleCheck.compare_guess(guess, "hello")
+    comparison = WordleCheck.WordleCheck.compare_guess(guess, daily_word)
 
     isCorrectWord = sum(comparison) == 15
 

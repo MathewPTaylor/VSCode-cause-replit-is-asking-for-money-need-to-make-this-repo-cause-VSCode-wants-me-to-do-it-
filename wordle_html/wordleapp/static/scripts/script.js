@@ -33,7 +33,7 @@ $(document).ready(function() {
         let isCorrectWord = result["correctWord"];
 
         if (!isWord) {
-            alert("not a word");
+//            alert("not a word");
             notAWord();
             return
         }
@@ -42,14 +42,6 @@ $(document).ready(function() {
 
         // 'revealing' the status of each letter, basically changing the colour of each square based on the location and value of the letter
         for (let i=0; i<5; i++) {
-            // let square = document.getElementById("main").children[((guesses) * 5) + i];
-            // square.style.animationDelay = 390 * i + "ms"
-            // square.classList.add("reveal"); 
-            // setTimeout(()=>{
-            //     square.classList.add(color_code[feedback[i]]);
-            //     console.log("COLOUR")
-            // }, 400 * i);
-
             setTimeout(function() {
                 console.log(guesses, guesses * 5, i);
                 let square = document.getElementById("main").children[((guesses) * 5) + i];
@@ -57,9 +49,14 @@ $(document).ready(function() {
                 square.classList.add(color_code[feedback[i]]);
             }, 250 * i);
         }
-
         
-        await sleep(1250);
+        await sleep(1500);
+
+        // changing the colors of the keys on the visual keyboard that were used on the previous guess
+        for (let i=0; i<5; i++) {
+            let key = document.getElementById(current_guess[i].toUpperCase());
+            key.style.backgroundColor = "var(--" + ["grey", "yellow", "green"][feedback[i] - 1] + ")";
+        }
         
         // check if the player has guessed correctly
         if (isCorrectWord) {
@@ -80,42 +77,31 @@ $(document).ready(function() {
     }
 
     async function winHandle() {
-        alert("YOU WIN!!!");
+        // display "you win" message on screen
+        displayPopUp("You Win!", 1500);
+
         // make guessed row jump up and down
-        for (let i = 0; i < 5; i++) {   
-            console.log("WINNNNNNNN", i);
+        for (let i = 0; i < 5; i++) {
             let square = document.getElementById("main").children[(guesses * 5) + i];
-            square.style.transform = "translateY(25%)";
-            await sleep(50);
-            // square.style.transform = "translateY(0%)";
-            
+            square.style.animationName = "giddy";
+            let duration = 350;
+            square.style.animationDuration = duration + "ms";
+            square.style.animationDelay = i * (duration / 5) + "ms";
         }
     }
 
     function loseHandle() {
-        alert("YOU LOST!!!");
+        displayPopUp("You lost", 2000);
     }
 
     async function notAWord() {
-
         for (let i = 0; i < 5; i++) {
             let square = document.getElementById("main").children[(guesses * 5) + i];
             square.classList.add("not-word");
         }
 
-        // document.getElementById("main").children[(guesses * 5) + 0].classList.add("not-word");
-        // document.getElementById("main").children[(guesses * 5) + 1].classList.add("not-word");
-        // document.getElementById("main").children[(guesses * 5) + 2].classList.add("not-word");
-        // document.getElementById("main").children[(guesses * 5) + 3].classList.add("not-word");
-        // document.getElementById("main").children[(guesses * 5) + 4].classList.add("not-word");
-
+        displayPopUp("Not a word", 1000);
         await sleep(200);
-
-        // document.getElementById("main").children[(guesses * 5) + 0].classList.remove("not-word");
-        // document.getElementById("main").children[(guesses * 5) + 1].classList.remove("not-word");
-        // document.getElementById("main").children[(guesses * 5) + 2].classList.remove("not-word");
-        // document.getElementById("main").children[(guesses * 5) + 3].classList.remove("not-word");
-        // document.getElementById("main").children[(guesses * 5) + 4].classList.remove("not-word");
 
         for (let i = 0; i < 5; i++) {
             let square = document.getElementById("main").children[(guesses * 5) + i];
@@ -123,25 +109,36 @@ $(document).ready(function() {
         }
     }
 
-    $(document).on("keydown", function(e) {
+    function displayPopUp(message, duration) {
+        let popupWrapper = document.getElementById("popup-wrapper");
+        let popup = document.createElement("div");
+        popup.classList.add("popup");
+        popup.innerHTML = message
+
+        popupWrapper.appendChild(popup);
+        setTimeout(()=>{
+            popup.remove();
+        }, duration);
+    }
+
+    function inputHandle(key) {
         if (preventInput) {
             return
         }
 
-        // alert(e.key);
-        if (isIn(e.key, alphabet)) {
+        if (isIn(key, alphabet)) {
             if (cur_column < 5) {
                 // visually add the letter that the player has pressed
                 let square = document.getElementById("main").children[(guesses * 5) + cur_column];
                 square.classList.add("selected-square");
-                square.innerHTML = e.key.toUpperCase();
+                square.innerHTML = key.toUpperCase();
 
                 // add the letter to the array
-                current_guess.push(e.key.toLowerCase())
+                current_guess.push(key.toLowerCase())
                 cur_column++;
             }
-            
-        } else if (e.key == "Backspace") {
+
+        } else if (key == "Backspace") {
             if (cur_column > 0) {
                 cur_column--;
                 // visually remove the letter
@@ -152,8 +149,8 @@ $(document).ready(function() {
                 // remove the letter from the array
                 current_guess.pop();
             }
-                
-        } else if (e.key == "Enter") {
+
+        } else if (key == "Enter") {
             // alert(JSON.stringify(current_guess));
             if (current_guess.length >= 5) {
                 let data = JSON.stringify(current_guess);
@@ -166,12 +163,14 @@ $(document).ready(function() {
                     data: data,
                     success: (result)=>{checkResultHandle(result)}
                 });
-                
             }
-            // alert("ajax fired up");
         }
         keypressed = true;
-    });
+    }
 
-    
+    $(document).on("keydown", e=>{inputHandle(e.key)});
+
+    $(".key").click(function() {
+        inputHandle(this.getAttribute("keyval"));
+    });
 });

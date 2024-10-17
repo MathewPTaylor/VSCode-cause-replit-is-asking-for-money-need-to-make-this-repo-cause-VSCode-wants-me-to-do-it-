@@ -8,14 +8,15 @@ class ColorCode(enum.IntEnum):
 class WordleCheck:
     @staticmethod
     def in_allowed_words(word: str) -> bool:
-        with open("/workspaces/VSCode-cause-replit-is-asking-for-money-need-to-make-this-repo-cause-VSCode-wants-me-to-do-it-/wordle_html/wordleapp/resources/valid-wordle-words.txt", "r") as fi:
+        with open(r"C:\Users\Admin\PycharmProjects\VSCode-cause-replit-is-asking-for-money-need-to-make-this-repo-cause-VSCode-wants-me-to-do-it-\wordle_html\wordleapp\resources\valid-wordle-words.txt", "r") as fi:
             x = 0
             file = fi.read().splitlines()
-            while x < len(file) and word != file[x]:
-                print(file[x])
+            while x < len(file) and ord(word[0]) >= ord(file[x][0]):
+                # print(file[x])
+                if word == file[x]:
+                    return True
                 x += 1
-            
-            return x < len(file)
+            return False
     
     @staticmethod
     def compare_guess(guess: str, daily_word: str) -> list[int, int, int, int, int]:

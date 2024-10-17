@@ -42,7 +42,7 @@ h1 {
     position: relative;
     color: #fff;
     background-color: var(--bgcol);
-    border: 0.2rem solid var(--bordercol);
+    border: 0.1rem solid var(--bordercol);
     font-size: 2.2em;
     font-weight: bolder;
     justify-content: center;
@@ -84,6 +84,7 @@ h1 {
     animation-name: select;
     animation-duration: 0.15s;
     animation-fill-mode: both;
+    /*border-color: var(--bordercolselect);*/
 }
 
 
@@ -91,9 +92,6 @@ h1 {
     0% {
         transform: rotateX(0deg);
         /* border-color: var(--bordercolselect); */
-    }
-
-    25% {
     }
 
     50% {
@@ -109,7 +107,7 @@ h1 {
     animation-name: reveal;
     animation-duration: 0.7s;
     animation-timing-function: ease;
-    animation-fill-mode: both;
+    animation-fill-mode: forwards;
 }
 
 @keyframes shimmy {
@@ -133,41 +131,92 @@ h1 {
     animation-fill-mode: both;
     border-color: var(--bordercolselect);
 }
-/* .reveal1 {
-    animation-name: reveal;
-    animation-duration: 0.7s;
-    animation-timing-function: ease;
-    animation-fill-mode: both;
+
+@keyframes giddy {
+    25% {
+        transform: translateY(-35%);
+    }
+
+    50% {
+        transform: translateY(15%);
+    }
+
+    75% {
+        transform: translateY(-20%);
+    }
+
+    100%{
+        transform: translateY(0%);
+    }
 }
 
-.reveal2 {
-    animation-name: reveal;
-    animation-duration: 0.7s;
-    animation-delay: 0.5s;
-    animation-timing-function: ease;
-    animation-fill-mode: both;
-}
-
-.reveal3 {
-    animation-name: reveal;
-    animation-duration: 0.7s;
-    animation-delay: 1.0s;
-    animation-timing-function: ease;
-    animation-fill-mode: both;
-}
-
-.reveal4 {
-    animation-name: reveal;
-    animation-duration: 0.7s;
-    animation-delay: 1.5s;
-    animation-timing-function: ease;
-    animation-fill-mode: both;
-}
-
-.reveal5 {
-    animation-name: reveal;
-    animation-duration: 0.7s;
-    animation-delay: 2.0s;
-    animation-timing-function: ease;
-    animation-fill-mode: both;
+/* .win {
+    animation-name: giddy;
+    animation-duration: 350ms;
+    animation-delay:
+    square.style.animationName = "giddy";
+            let duration = 350;
+            square.style.animationDuration = duration + "ms";
+            square.style.animationDelay = i * (duration / 5) + "ms";
 } */
+
+.popup-wrapper {
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translate(-44%, -10px);
+    /*background-color: green;*/
+    z-index: 1;
+}
+
+.popup {
+    display: block;
+    position: relative;
+    background-color: white;
+    border-radius: 0.3em;
+    padding: 0.7em;
+    margin-bottom: 0.5em;
+    font-size: 1em;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.keyboard-wrapper {
+    display: block;
+    position: relative;
+    width: 35em;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 1em;
+}
+
+.key {
+    display: inline-block;
+    position: relative;
+    width: 2em;
+    background-color: grey;
+    color: white;
+    font-size: 1.5em;
+    padding: 0.7em 0em;
+    margin: 0em 0.1em 0.3em 0.1em;
+    border-radius: 0.15em;
+    font-weight: 600;
+    text-align: center;
+}
+
+.key:hover {
+    cursor: pointer;
+}
+
+.keyboard-row {
+    display: flex;
+    justify-content: center;
+}
+
+.special-key {
+    width: auto;
+    font-size: 1.4em;
+    padding-top: 0.77em;
+    padding-left: 0.4em;
+    padding-right: 0.4em;
+}
