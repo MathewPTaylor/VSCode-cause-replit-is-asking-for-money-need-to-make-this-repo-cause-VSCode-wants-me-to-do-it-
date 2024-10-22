@@ -8,7 +8,7 @@ class ColorCode(enum.IntEnum):
 class WordleCheck:
     @staticmethod
     def in_allowed_words(word: str) -> bool:
-        with open(r"C:\Users\Admin\PycharmProjects\VSCode-cause-replit-is-asking-for-money-need-to-make-this-repo-cause-VSCode-wants-me-to-do-it-\wordle_html\wordleapp\resources\valid-wordle-words.txt", "r") as fi:
+        with open(r"./wordleapp/resources/valid-wordle-words.txt", "r") as fi:
             x = 0
             file = fi.read().splitlines()
             while x < len(file) and ord(word[0]) >= ord(file[x][0]):
