@@ -11,5 +11,9 @@ def index():
 def rordor():
     return render_template("rordor.html")
 
+@app.route("/chess")
+def chess():
+    return render_template("chess.html")
+
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=81, debug=True, auto_reload=True)

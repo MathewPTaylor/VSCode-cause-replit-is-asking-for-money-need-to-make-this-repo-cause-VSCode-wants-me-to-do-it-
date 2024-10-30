@@ -1,0 +1,23 @@
+:root {
+    --maxsize: 100px;
+    --minsize: 50px;
+}
+
+.board-container {
+    display: grid;
+    width: 600px;
+    /* min-width: 600px; */
+    /* max-width: 600px; */
+    aspect-ratio: 1 / 1;
+    grid-template-columns: repeat(8, minmax(var(--minsize), var(--maxsize)));
+    grid-template-rows: repeat(8, minmax(var(--minsize), var(--maxsize)));
+    background-color: green;
+    gap: 0em;
+}
+
+.board-square {
+    /* width: 75px; */
+    /* height: 75px; */
+    margin-top: 0em;
+    margin-bottom: 0em;
+}
