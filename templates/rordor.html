@@ -487,7 +487,7 @@
         class GoodDeedMaker {
             static months = ["ต.ค.", "ก.ย.", "ก.ค."];
             static actions = ["ล้างจานที่บ้าน", "เก็บขยะ", "เป็นลูกที่ดีต่อพ่อแม่", "ล้างจาน", "เก็บขยะที่รร", "ถ่ายรูปให้เพื่อน", "ทำการบ้านของครู", "ต่อสู้ kaiju กับ gypsy danger", "ซื้อนำ้ให้เพื่อน", "ติวสอบให้เพื่อน"];
-            static noRecords = 33;
+            static noRecords = {{ noGoodDeeds }};
 
             static getRandomDate() {
                 let day = Random.randomInt(1, 30);
@@ -525,7 +525,7 @@
             let levelDisp = document.getElementById("level-disp");
             levelDisp.innerHTML = `Level: 1`; // ${Math.floor(GoodDeedMaker.noRecords / 30)}`
 
-            GoodDeedMaker.yes();
+            // GoodDeedMaker.yes();
             // adding the records
             for (let i=4; i<GoodDeedMaker.noRecords+1; i++) {   
                 GoodDeedMaker.addRecord(i, GoodDeedMaker.getRandomDate(), GoodDeedMaker.getRandomAction());
@@ -564,7 +564,7 @@
                                         <div class="col">
                                             <h5><span class="badge bg-header-badge text-dark"><img
                                                         src="data:image/png;base64,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"
-                                                        alt="" height="19"> 2</span></h5>
+                                                        alt="" height="19"> {{ noGoodDeeds }}</span></h5>
                                         </div>
                                     </div>
                                 </div>
@@ -619,7 +619,7 @@
                                                     <div class="text-center">
                                                         <h2 class="level-mobile" style="font-family: 'Poppins', sans-serif;
                                                         font-style: normal;
-                                                        font-weight: unset;">Level: 0</h2>
+                                                        font-weight: unset;">Level: {{ level }}</h2>
                                                     </div>
                                                 </div>
                                             </div>

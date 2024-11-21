@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investment Calculator</title>
+    <link rel="stylesheet" href="../static/styles/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <script src="../static/scripts/investment.js"></script>
+
+    <u><center><h1>Compound Interest Calculator</h1></center></u>
+    <div class="graphContainer" id="graph-container">
+        <canvas class="canvas" id="expCanvas"></canvas>
+    </div>
+
+    <form id="input-form" action="#">
+        <label for="returnPA">Average Return Per Annum (%)</label>
+        <input class="inputBox" id="returnPA" type="text"> <br>
+        
+        <label for="perYear">Investment Per Annum ($)</label>
+        <input class="inputBox" id="perYear" type="text"> <br>
+
+        <label for="noYears">Number of years invested</label>
+        <input class="inputBox" id="noYears" type="text"> <br>
+
+        <button type="submit" id="submitBtn">Calculate</button>
+    </form>
+
+    <div id="earningsDisp" class="earningDisp">
+
+    </div>
+</body>
+</html>
