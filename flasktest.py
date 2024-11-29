@@ -1,7 +1,41 @@
 from flask import Flask, render_template, request, json
 import math
+import csv
+import dotenv
+import os
+import requests
+
+# replace the "demo" apikey below with your own key from https://www.alphavantage.co/support/#api-key
 
 app = Flask(__name__)
+
+
+dotenv.load_dotenv("./my.env")
+key = os.getenv("KEY")
+# url = f"https://www.alphavantage.co/query?function=TIME_SERIES_MONTHLY&symbol=AAPL&apikey={key}"
+# r = requests.get(url)
+# data = r.json()
+
+def get_data_json(url=None):
+    if url is None:
+        with open("aapl.json", "r") as f:
+            data = json.load(f)
+            return data
+    else:
+        # url = f"https://www.alphavantage.co/query?function=TIME_SERIES_MONTHLY&symbol=AAPL&apikey={key}"
+        # r = requests.get(url)
+        # data = r.json()
+        # return data
+        pass
+
+
+
+
+total = 0
+for i in range(1, 100):
+    total += (1/i)
+
+print("totAL:", total)
 
 @app.route("/")
 def index():
@@ -43,6 +77,33 @@ def calculate_return():
     return json.dumps(return_data)
 
 
+@app.route("/d3", methods=["GET"])
+def d3():
+    return render_template("d3test.html")
+
+@app.route("/get_csv", methods=["POST"])
+def get_csv():
+    # do some csv dict reader shit here
+    array = []
+    json_result = get_data_json()
+    graph_data = json_result["Monthly Time Series"]
+    # each key is the date and the value are the prices
+    for key in graph_data.keys():
+        print(key, type(key))
+        array.append({
+            "date": key,
+            "value": graph_data[key]["4. close"]
+        })
+    
+    print(array)
+    return array
+
+
+    # with open('jail_data.csv') as csvfile:
+    #     reader = csv.DictReader(csvfile)
+    #     for line in reader:
+    #         array.append(line)
+    #     return json.dumps(array)
 
 class CompoundInterest:
     @staticmethod

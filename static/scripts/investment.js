@@ -1,4 +1,5 @@
-import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
+// import * as d3 from "https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js";
+
 $(document).ready(function() {
     $("#input-form").click((e)=>{
         // prepare ajax request
@@ -62,19 +63,42 @@ $(document).ready(function() {
         try {
             let width = 400;
             let height = 400;
+            let marginBottom = 50;
 
             // x scale
-            xAxis = d3.scaleLinear([0, 100], [0, width]);
+            xAxis = d3.scaleLinear([0, 100], [30, width]);
 
             //y scale
-            yAxis = d3.scaleLinear([0, 100], [0, height]);
+            yAxis = d3.scaleLinear([0, 100], [30, height]);
 
-            let graph = document.getElementById("graph-container");
-            graph.appendChild(xAxis);
+            // make line
+            line = d3.line()
+            line.x(xAxis)
+            line.y(yAxis);
+
+            // svg
+            svg = d3.create("svg")
+            .attr("width", width)
+            .attr("height", height)
+            .attr("viewbox", [0, 0, width*1.5, height*1.5]);
+
+            // add x axis
+            svg.append("g").call(d3.axisBottom(xAxis)).style("transform", `translate(0, ${height-marginBottom}px)`);
+
+            // add y axis
+            svg.append("g").call(d3.axisLeft(yAxis)).style('transform', `translate(20px, 0)`);
+            
+            // append path for line
+            svg.append("path").attr("stroke", "lightblue").attr("stroke-width", "1.5");
+
+
+            alert("YOOOO");
+            return svg.node();
         } catch (e) {
             alert(e);
         }
     }
 
-    addGraph();
+    let graph = document.getElementById("graph-container");
+    graph.appendChild(addGraph());
 });
