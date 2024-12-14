@@ -60,6 +60,8 @@ def binary_search_2(array, target):
     print(counter, "COUNTTT")
     return -1
 
+
+
 random_elements(arr)
 
 print("Before: ", arr)

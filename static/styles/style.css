@@ -65,3 +65,8 @@ html, body {
     font-size: 1.5em;
     font-weight: bold;
 }
+
+
+svg {
+    /* background-color: red; */
+}

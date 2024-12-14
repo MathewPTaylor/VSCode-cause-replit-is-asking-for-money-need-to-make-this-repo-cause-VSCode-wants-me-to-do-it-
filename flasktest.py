@@ -99,6 +99,26 @@ def get_csv():
     return array
 
 
+@app.route("/get_csv_candle", methods=["post"])
+def csv_candle():
+    array = []
+    json_result = get_data_json()
+    graph_data = json_result["Monthly Time Series"]
+    # each key is the date and the value are the prices
+    for key in graph_data.keys():
+        print(key, type(key))
+        array.append({
+            "Date": key,
+            "Open": graph_data[key]["1. open"],
+            "Close": graph_data[key]["4. close"],
+            "Low": graph_data[key]["3. low"],
+            "High": graph_data[key]["2. high"] 
+        })
+    
+    print(array)
+    return array
+
+
     # with open('jail_data.csv') as csvfile:
     #     reader = csv.DictReader(csvfile)
     #     for line in reader:
