@@ -1,16 +1,17 @@
 from flask import Flask, render_template, request, json
 import math
 import csv
-import dotenv
+# import dotenv
 import os
 import requests
+from db import DB
 
 # replace the "demo" apikey below with your own key from https://www.alphavantage.co/support/#api-key
 
 app = Flask(__name__)
 
 
-dotenv.load_dotenv("./my.env")
+# dotenv.load_dotenv("./my.env")
 key = os.getenv("KEY")
 # url = f"https://www.alphavantage.co/query?function=TIME_SERIES_MONTHLY&symbol=AAPL&apikey={key}"
 # r = requests.get(url)
@@ -124,6 +125,22 @@ def csv_candle():
     #     for line in reader:
     #         array.append(line)
     #     return json.dumps(array)
+
+
+@app.route("/todo", methods=["post", "get"])
+def todo():
+    return render_template("todo.html")
+
+@app.route("/add_todo")
+def add_todo():
+    data = request.get_json()
+
+
+@app.route("/get_todo")
+def get_todo():
+    todo = DB.get_records(id)
+
+
 
 class CompoundInterest:
     @staticmethod
