@@ -1,14 +1,18 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import Title from './components/Title'
+import InputBox from './components/InputBox'
+import ListItem from './components/ListItem'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [listTodo, setListTodo] = useState([]);
 
   return (
     <>
-      <h1>Hello world!</h1>
+      <Title>To-do List</Title>
+      <InputBox></InputBox>
+
+      {listTodo.map(todo => {console.log(todo)})}
     </>
   )
 }
