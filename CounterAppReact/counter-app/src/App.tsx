@@ -1,6 +1,12 @@
+import CounterWrapper from "./components/CounterWrapper"
+import "./App.css"
+
 function App() {
   return (
-    <h1>Hello World</h1>
+    <>
+      <center><h1>Hello World</h1></center>
+      <CounterWrapper />
+    </>
   )
 }
 
