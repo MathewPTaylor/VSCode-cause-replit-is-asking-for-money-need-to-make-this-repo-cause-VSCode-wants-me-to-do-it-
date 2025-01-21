@@ -1,0 +1,27 @@
+.crow {
+  /* background-color: green; */
+  margin: 0.5rem 0rem;
+}
+
+.cbtn {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  /* height: 4rem; */
+  /* padding: 1rem 2rem; */
+  font-size: 1.5rem;
+}
+
+.cinput {
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  text-align: right;
+  overflow: scroll;
+  margin-bottom: 1rem;
+}
+
+
+.cwrapper {
+  background-color: #005;
+  padding: 1rem;
+  border-radius: 1rem;
+}

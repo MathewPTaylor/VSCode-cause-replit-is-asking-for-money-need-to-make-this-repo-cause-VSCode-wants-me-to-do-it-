@@ -1,0 +1,39 @@
+html, body {
+    background-color: #ff00ff;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.btn {
+    margin: 0.3rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: whitesmoke;
+    background-color: #3344ff;
+    appearance: none;
+    border-radius: 0.3rem;
+    border: none;
+}
+
+.counter-disp {
+    color: #123;
+    margin-left: 0.2rem;
+}
+
+.card {
+    position: relative;
+    display: block;
+    width: 250px;
+    height: auto;
+    margin: 0.35rem;
+    padding: 0.2rem;
+    background-color: #eee;
+    border-radius: 0.35rem;
+}
+
+.grid {
+    /* position: relative; */
+    display: grid;
+    /* grid-template-columns: 250px 250px 250px 250px; */
+    grid-template-columns: auto auto auto auto;
+}
