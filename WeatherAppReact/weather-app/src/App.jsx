@@ -74,12 +74,12 @@ function App() {
   return (
     <>
       <div>{null}</div>
-      <div className="bg night">
+      <div className="bg day">
         {}
       </div>
       <Header />
       <InputWrapper onChange={(val) => {setInputVal(val)}} onClick={() => {console.log(inputVal)}}/>
-      <div className='mainCard darkMode'>
+      <div className='mainCard'>
         <h2 className='locationTitle'>Bangkok, Thailand</h2>
         <div style={{fontSize: "4rem", margin: "2rem 0"}}>28ºC <span style={{color: "rgba(0, 0, 0, 0.3)"}}> | 67ºF</span></div>
 
@@ -92,6 +92,7 @@ function App() {
           </div>
 
           <div className='metInfo'>
+            <img src="C:\Users\Admin\Downloads\wind.png" alt="wind" />
             <p style={{margin: "1rem 0 0 0"}}>Wind</p>
             <span>3.5mph</span>
           </div>
