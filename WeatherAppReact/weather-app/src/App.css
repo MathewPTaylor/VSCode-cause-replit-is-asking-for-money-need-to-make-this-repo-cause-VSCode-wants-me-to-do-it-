@@ -3,6 +3,14 @@ body, html{
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+:root {
+  --epa1: chartreuse;
+  --epa2: rgb(209, 209, 29);
+  --epa3: rgb(212, 146, 22);
+  --epa4: red;
+  --epa5: maroon;
+}
+
 .bg {
   position: fixed;
   width: 100%;
@@ -58,6 +66,7 @@ body, html{
 .placeInput {
   width: 350px;
   height: 2rem;
+  padding-left: 0.3rem;
 }
 
 .searchBtn {
@@ -75,10 +84,12 @@ body, html{
 
 .mainCard {
   display: block;
+  position: relative;
   width: auto;
   /* height: 100px; */
   margin: 1rem 0.5rem;
   padding: 2rem 1rem;
+  padding-bottom: 1rem;
   background-color: white;
   border-radius: 0.4rem;
   box-shadow: 0 0 1rem rgba(100, 100, 100, 0.5);
@@ -107,6 +118,7 @@ body, html{
 .locationTitle {
   font-size: 1.75rem;
   margin-top: unset;
+  margin-bottom: 0.5rem;
 }
 
 .cardHolder {
@@ -116,10 +128,54 @@ body, html{
 }
 
 .metWrapper {
+  /* background-color: green; */
   display: flex;
   gap: 1rem;
+  font-size: 1rem;
+  align-items: center;
 }
 
 .metInfo {
+  display: flex;
+  align-items: center;
   margin-right: 1rem;
 }
+
+.mr-05 {
+  margin-right: 0.5rem;
+}
+
+.mr-06 {
+  margin-right: 0.6rem;
+}
+
+.lastUpdated {
+  font-size: 0.95rem;
+  margin-left: 0.05rem;
+}
+
+.epa1 {
+  background-color: chartreuse;
+}
+
+.epa2 {
+  background-color: rgb(209, 209, 29);
+}
+
+.epa3 {
+  background-color: rgb(212, 146, 22);
+}
+
+.epa4 {
+  background-color: red;
+}
+
+.epa5 {
+  background-color: maroon;
+}
+
+
+/* .aqiInfo {
+  color: white;
+  padding: 0.5rem;
+} */
