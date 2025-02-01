@@ -147,7 +147,11 @@ class Physics:
 class OrbitSystem:
     time_step = 0.001
 
+def add_body(x, y):
+    Object(mass=10000, pos=(x, y))
 
+win.listen()
+win.onclick(lambda x, y: add_body(x, y), 1)
 # test1 = Object(
 #     mass=10000,
 #     pos=(0, 0)
@@ -171,16 +175,15 @@ class OrbitSystem:
 
 n = 1
 
-sun = Object(333000 / n, (0, 0), "sun")
+# sun = Object(333000 / n, (0, 0), "sun")
 # mercury = Object(0.2 / n, (20, 0), "mercury")
 # venus = Object(0.5 / n, (35, 0), "venus")
-earth = Object(100000 / n, (50, 100), "earth")
+# earth = Object(100000 / n, (50, 100), "earth")
 # mars = Object(0.8 / n, (65, 0), "mars")
 # jupiter = Object(1300 / n, (130, 0), "jupiter")
 # saturn = Object(1100 / n, (160, 0), "saturn")
 # uranus = Object(1000 / n, (190, 0), "uranus")
-neptune = Object(1050 / n, (240, 0), "neptune")
-
+# neptune = Object(1050 / n, (240, 0), "neptune")
 
 
 # velo = Physics.calculate_orbit_speed(test2, test3)

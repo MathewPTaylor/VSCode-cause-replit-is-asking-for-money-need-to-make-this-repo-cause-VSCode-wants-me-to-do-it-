@@ -3,7 +3,7 @@ from random import randint, choice
 import math
 
 win = turtle.Screen()
-win.tracer(1)
+win.tracer(0)
 
 class Node:
   node_id = 1

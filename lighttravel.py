@@ -63,8 +63,8 @@ class Star:
 n = 50
 
 for i in range(n):
-    x = randint(-Window.width / 2, Window.width / 2)
-    y = randint(-Window.height / 2, Window.height / 2)
+    x = randint(-Window.width // 2, Window.width // 2)
+    y = randint(-Window.height // 2, Window.height // 2)
     z = randint(5, 15)
 
     Star(
