@@ -4,7 +4,7 @@ interface Props {
 
 function CounterDisplay({value}: Props) {
     return (
-        <h1>{value}</h1>
+        <h2 className="counter-disp">{value}</h2>
     )
 }
 
