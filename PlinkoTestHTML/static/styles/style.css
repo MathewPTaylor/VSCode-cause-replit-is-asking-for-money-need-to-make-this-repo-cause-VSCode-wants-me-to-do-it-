@@ -1,0 +1,33 @@
+:root {
+    --gameWidth: 500px;
+    --gameHeight: 500px;
+}
+
+.gameWrapper {
+    display: flex;
+    position: relative;
+    width: var(--gameWidth);
+    height: auto;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+    /* background-color: green; */
+    left: 50%;
+    transform: translateX(-50%);
+}
+/* 
+#buttonContainer > * {
+    float: left;
+} */
+
+
+button {
+    padding: 0.2rem 0.5rem;
+    font-size: 1.1rem;
+    /* border-top: 2px white solid;
+    border-left: 2px white solid; */
+    border: none;
+    border-radius: 0.15rem;
+    /* color: white; */
+    /* background-image: linear-gradient(lightblue, blue, blue, blue, darkblue); */
+}

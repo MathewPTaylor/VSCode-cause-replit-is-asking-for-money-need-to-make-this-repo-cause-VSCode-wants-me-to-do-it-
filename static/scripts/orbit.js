@@ -22,25 +22,11 @@ class Vector {
 
     getXComponent() {
         let radians = this.angle / 180 * Math.PI;
-        let sign;
-        if (Math.cos(radians) == 0) {
-            sign = 1;
-        } else {
-            sign = Math.cos(radians) / Math.abs(Math.cos(radians));
-        }
         return Math.cos(radians) * this.magnitude;
     }
 
     getYComponent() {
         let radians = this.angle / 180 * Math.PI;
-        let sign;
-
-        if (Math.sin(radians) == 0) {
-            sign = 1;
-        } else {
-            sign = Math.sin(radians) / Math.abs(Math.sin(radians));
-        }
-
         return Math.sin(radians) * this.magnitude;
     }
 
