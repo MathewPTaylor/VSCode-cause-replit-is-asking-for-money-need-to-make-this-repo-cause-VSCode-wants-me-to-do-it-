@@ -141,6 +141,9 @@ def get_todo():
     todo = DB.get_records(id)
 
 
+@app.route("/plinko")
+def plinko():
+    return render_template("plinko.html")
 
 class CompoundInterest:
     @staticmethod

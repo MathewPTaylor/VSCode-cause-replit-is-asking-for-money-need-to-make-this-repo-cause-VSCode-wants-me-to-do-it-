@@ -148,7 +148,7 @@ class OrbitSystem:
     time_step = 0.001
 
 def add_body(x, y):
-    Object(mass=10000, pos=(x, y))
+    Object(mass=1000, pos=(x, y))
 
 win.listen()
 win.onclick(lambda x, y: add_body(x, y), 1)
