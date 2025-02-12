@@ -1,33 +1,75 @@
+body, html {
+    margin: unset;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
 :root {
     --gameWidth: 500px;
     --gameHeight: 500px;
 }
 
 .gameWrapper {
-    display: flex;
+    display: grid;
+    grid-template-columns: 30% 70%;
     position: relative;
-    width: var(--gameWidth);
+    width: auto;
     height: auto;
-    /* justify-content: center; */
     align-items: center;
     flex-direction: column;
-    /* background-color: green; */
     left: 50%;
     transform: translateX(-50%);
+    background-color: green;
 }
-/* 
-#buttonContainer > * {
-    float: left;
-} */
 
+.controlPanel {
+    height: 100%;
+    background-color: blue;
+    padding: 0 0.2rem;
+}
+
+#balanceDisp {
+    margin: 1rem 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: whitesmoke;
+}
+
+.controlLabels {
+    display: block;
+    color: whitesmoke;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.controlInputs {
+    width: auto;
+    font-size: 1rem;
+}
+
+#ballPriceInput {
+    text-align: right;
+}
 
 button {
-    padding: 0.2rem 0.5rem;
+    /* padding: 0.2rem 0.5rem; */
     font-size: 1.1rem;
-    /* border-top: 2px white solid;
-    border-left: 2px white solid; */
     border: none;
     border-radius: 0.15rem;
-    /* color: white; */
-    /* background-image: linear-gradient(lightblue, blue, blue, blue, darkblue); */
+    touch-action: manipulation;
+}
+
+#circleBtn {
+    width: 100%;
+    margin: 1rem 0;
+    font-size: 2rem;
+    color: whitesmoke;
+    background-color: orange;
+}
+
+
+#canvasWrapper {
+    display: flex;
+    justify-content: center;
+    background-color: red;
+    padding: 0;
 }

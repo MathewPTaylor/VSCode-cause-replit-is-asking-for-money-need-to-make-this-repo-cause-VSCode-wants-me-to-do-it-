@@ -4,8 +4,11 @@ import Header from './components/Header';
 import InputWrapper from './components/InputWrapper';
 import axios from 'axios';
 import Main from './components/Main';
-import { useOptimistic } from 'react';
 // import REACT_APP_WEATHER_API_KEY from "./my.env"
+require("dotenv").config()
+
+// const API_KEY = process.env.REACT_APP_WEATHER_API_KEY;
+// alert(API_KEY); 
 
 function App() {
   const [data, setData] = useState(null);
@@ -76,7 +79,8 @@ function App() {
       <div className='mainCard'>
         {data? data.error? 
           (
-            <h2 className='locationTitle'>Location Not Found.</h2> //{data.error.message}{data.error.code}
+            <h2 className='locationTitle'>Location Not Found.</h2> //
+            // <h2>{data.error.message}{data.error.status}</h2>
           ) : (
           <Main data={data}/>
           ) : (

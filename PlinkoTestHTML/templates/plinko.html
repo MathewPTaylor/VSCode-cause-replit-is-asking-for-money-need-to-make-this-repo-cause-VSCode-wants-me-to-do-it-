@@ -13,14 +13,23 @@
     <script src="../static/scripts/script.js" type="module"></script>
 
     <div id="gameWrapper" class="gameWrapper">
+        <div id="controlPanel" class="controlPanel">
+            <div id="balanceDisp">Balance: $123</div>
+            <label class="controlLabels" for="ballPrice">Amount per ball ($):</label>
+            <input type="text" name="ball price" id="ballPriceInput" class="controlInputs" value="$1">
+
+            <div id="buttonContainer">
+                <button id="circleBtn">Drop</button>
+                <button id="sendBtn">Send</button>
+            </div>
+        </div>
+        
+        <!-- <canvas id="yes"></canvas> -->
         <div id="canvasWrapper">
-            <canvas id="canvas1"></canvas>
+            <canvas id="canvas1" style="background-color: black;"></canvas>
         </div>
     
-        <div id="buttonContainer">
-            <button id="squareBtn">Square</button>
-            <button id="circleBtn">Circle</button>
-        </div>
+
     </div>
     
 </body>
