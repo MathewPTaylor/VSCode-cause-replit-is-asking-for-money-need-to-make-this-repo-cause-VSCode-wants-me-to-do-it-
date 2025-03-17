@@ -1,7 +1,6 @@
 html, body {
     margin: unset;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    /* background-color: blue; */
 }
 
 .wrapper {
@@ -13,14 +12,12 @@ html, body {
 }
 
 .diceWrapper {
-    /* width: 100%; */
     gap: 5rem;
 }
 
 .diceContainer {
     width: fit-content;
     background: green;
-    /* color: whitesmoke; */
 }
 
 
@@ -69,12 +66,50 @@ html, body {
 .banner {
     position: static;
     width: 100%;
-    height: 6rem    ;
-    background-color: grey;
+    height: 4rem;
+    background-color: white;
     text-align: center;
+    box-shadow: 0rem 0rem 1rem 0.1rem;
 }
 
 .bannerTitle {
     font-size: 2rem;
     color: #eee;
+    float: left;
+    background-color: black;
+}
+
+.bettingArea {
+    min-width: 250px;
+    width: 450px;
+    max-width: 450px;
+    padding: 0.5rem;
+    background-color: red;
+}
+
+.betInput {
+    font-size: 1.15rem;
+}
+
+.radioPick {
+    width: 100%;
+    height: 2rem;
+    appearance: none;
+    background-color: hotpink;
+    border-radius: 0.2rem;
+}
+
+.selected {
+    background-color: #aaa;
+}
+
+#radioContainer {
+    display: grid;
+    background-color: pink;
+    grid-template-columns: 50% 50%;
+    gap: 0.2rem;
+}
+
+.contain {
+    margin: 0.5rem 0;
 }

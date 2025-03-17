@@ -1,0 +1,57 @@
+body {
+    background-color: navy;
+    font-family: 'Arial';
+}
+
+#battleshipName {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: red;
+    font-size: 3.5rem;
+}
+
+.title {
+    position: relative;
+    display: flex;
+    width: auto;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title > * {
+    box-shadow: 0 0 1 1 1 rgba(0, 0, 0, 0.6);
+}
+
+h1 {
+    margin: 0.15rem;
+}
+
+
+.ws {
+    color: whitesmoke;
+}
+
+.form {
+    position: relative;
+    display: flex;
+    width: 350px;
+    left: 50%;
+    transform: translateX(-50%);
+    flex-direction: column;
+    background-color: #4400bb;
+    margin: 2rem 0;
+    padding: 1rem;
+    border-radius: 0.25rem;
+}
+
+input {
+    font-size: 1.25rem;
+    border-radius: 0.25rem;
+    margin: 0.5rem 0;
+}
+
+h2 {
+    color: whitesmoke;
+    margin: 0.5rem 0;
+    padding: 0;
+}

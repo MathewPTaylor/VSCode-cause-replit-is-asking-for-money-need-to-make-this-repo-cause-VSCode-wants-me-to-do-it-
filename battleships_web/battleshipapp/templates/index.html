@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battleships</title>
+    <link rel="stylesheet" href="../static/styles/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.4/socket.io.js"></script>
+</head>
+<body>
+    <script src="../static/scripts/scripts.js"></script>
+
+    <div id="title" class="title">
+        <h1 class="ws">Welcome To</h1>
+        <span id="battleshipName">Battleship</span>
+    </div>
+
+    <form id="roomForm" class="form" action="#">
+        <h2>Join a game</h2>
+        <input type="text" name="username" id="nameInput" placeholder="Enter player name">
+        <input type="text" name="roomId" id="roomInput" placeholder="Enter room ID">
+        <input type="submit" value="Find">
+    </form>
+</body>
+</html>

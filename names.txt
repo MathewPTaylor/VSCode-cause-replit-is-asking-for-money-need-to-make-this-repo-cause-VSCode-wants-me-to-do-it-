@@ -1,0 +1,805 @@
+Alice
+B13
+GS2
+D (Dr Rafael)
+4
+Dr Rafael & Ms McDonald
+Beach Olympics
+Aw Sa
+B13
+D12
+C (Mr Thomas)
+3
+Mr Thomas & Dr Tsai
+Snorkelling
+David
+B13
+GS3
+D (Dr Rafael)
+4
+Dr Rafael & Ms McDonald
+Beach Olympics
+Deen
+B13
+D5
+B (Ms Tinnacher)
+2
+Ms Tinnacher & Ms Tum
+Muay Thai
+Eugene
+B13
+D21
+B (Ms Tinnacher)
+2
+Ms Tinnacher & Ms Tum
+Muay Thai
+Julia
+B13
+D24
+C (Mr Thomas)
+3
+Mr Thomas & Dr Tsai
+Snorkelling
+Kla B
+B13
+D11
+A (Ms Poel)
+3
+Mr Thomas & Dr Tsai
+Snorkelling
+Korner
+B13
+D20
+D (Dr Rafael)
+4
+Dr Rafael & Ms McDonald
+Beach Olympics
+Maile
+B13
+D18
+A (Ms Poel)
+1
+Ms Poel & Ms Woollam
+Botanical Gardens (kayaking)
+Manta
+B13
+GS1
+D (Dr Rafael)
+4
+Dr Rafael & Ms McDonald
+Beach Olympics
+Pallak
+B13
+D25
+C (Mr Thomas)
+3
+Mr Thomas & Dr Tsai
+Snorkelling
+Pam
+B13
+GS6
+D (Dr Rafael)
+4
+Dr Rafael & Ms McDonald
+Beach Olympics
+Putter
+B13
+D21
+B (Ms Tinnacher)
+2
+Ms Tinnacher & Ms Tum
+Muay Thai
+Sun
+B13
+D31
+A (Ms Poel)
+1
+Ms Poel & Ms Woollam
+Botanical Gardens (kayaking)
+Tete
+B13
+D11
+A (Ms Poel)
+3
+Mr Thomas & Dr Tsai
+Snorkelling
+Three
+B13
+GS4
+B (Ms Tinnacher)
+4
+Dr Rafael & Ms McDonald
+Beach Olympics
+Time
+B13
+D11
+A (Ms Poel)
+3
+Mr Thomas & Dr Tsai
+Snorkelling
+Yeong Shin
+B13
+D17
+A (Ms Poel)
+1
+Ms Poel & Ms Woollam
+Botanical Gardens (kayaking)
+Yew Yew
+B13
+D2
+B (Ms Tinnacher)
+2
+Ms Tinnacher & Ms Tum
+Muay Thai
+Zay
+B13
+D12
+C (Mr Thomas)
+3
+Mr Thomas & Dr Tsai
+Snorkelling
+Aaron
+C13
+D7
+A (Ms Poel)
+1
+Ms Poel & Ms Woollam
+Botanical Gardens (kayaking)
+AJ
+C13
+D25
+C (Mr Thomas)
+3
+Mr Thomas & Dr Tsai
+Snorkelling
+Alawi
+C13
+D31
+A (Ms Poel)
+1
+Ms Poel & Ms Woollam
+Botanical Gardens (kayaking)
+Anakin
+C13
+D5
+B (Ms Tinnacher)
+2
+Ms Tinnacher & Ms Tum
+Muay Thai
+Claire
+C13
+D16
+B (Ms Tinnacher)
+2
+Ms Tinnacher & Ms Tum
+Muay Thai
+Damian
+C13
+GS5
+D (Dr Rafael)
+4
+Dr Rafael & Ms McDonald
+Beach Olympics
+Emma
+C13
+GS6
+D (Dr Rafael)
+4
+Dr Rafael & Ms McDonald
+Beach Olympics
+Gene
+C13
+GS6
+D (Dr Rafael)
+4
+Dr Rafael & Ms McDonald
+Beach Olympics
+Haerin
+C13
+GS6
+D (Dr Rafael)
+4
+Dr Rafael & Ms McDonald
+Beach Olympics
+Inkk
+C13
+D22
+B (Ms Tinnacher)
+2
+Ms Tinnacher & Ms Tum
+Muay Thai
+Jieng
+C13
+D4
+B (Ms Tinnacher)
+2
+Ms Tinnacher & Ms Tum
+Muay Thai
+Johm
+C13
+D20
+D (Dr Rafael)
+4
+Dr Rafael & Ms McDonald
+Beach Olympics
+Leo
+C13
+D5
+B (Ms Tinnacher)
+2
+Ms Tinnacher & Ms Tum
+Muay Thai
+Lin
+C13
+GS7
+A (Ms Poel)
+1
+Ms Poel & Ms Woollam
+Botanical Gardens (kayaking)
+Mint
+C13
+D26
+C (Mr Thomas)
+3
+Mr Thomas & Dr Tsai
+Snorkelling
+Paul
+C13
+D20
+D (Dr Rafael)
+4
+Dr Rafael & Ms McDonald
+Beach Olympics
+Plearn
+C13
+GS8
+A (Ms Poel)
+1
+Ms Poel & Ms Woollam
+Botanical Gardens (kayaking)
+Proud
+C13
+D16
+B (Ms Tinnacher)
+2
+Ms Tinnacher & Ms Tum
+Muay Thai
+Sophia
+C13
+D18
+A (Ms Poel)
+1
+Ms Poel & Ms Woollam
+Botanical Gardens (kayaking)
+Swan
+C13
+GS3
+D (Dr Rafael)
+4
+Dr Rafael & Ms McDonald
+Beach Olympics
+Viktoriya
+C13
+D26
+C (Mr Thomas)
+3
+Mr Thomas & Dr Tsai
+Snorkelling
+Bew
+K13
+D27
+C (Mr Thomas)
+3
+Mr Thomas & Dr Tsai
+Snorkelling
+Gao
+K13
+GS4
+B (Ms Tinnacher)
+4
+Dr Rafael & Ms McDonald
+Beach Olympics
+Htoo
+K13
+D21
+B (Ms Tinnacher)
+2
+Ms Tinnacher & Ms Tum
+Muay Thai
+Itim
+K13
+GS5
+D (Dr Rafael)
+4
+Dr Rafael & Ms McDonald
+Beach Olympics
+Jamie
+K13
+GS7
+A (Ms Poel)
+1
+Ms Poel & Ms Woollam
+Botanical Gardens (kayaking)
+Kar Kar
+K13
+GS3
+D (Dr Rafael)
+4
+Dr Rafael & Ms McDonald
+Beach Olympics
+Ken K
+K13
+D31
+A (Ms Poel)
+1
+Ms Poel & Ms Woollam
+Botanical Gardens (kayaking)
+Marc
+K13
+D13
+C (Mr Thomas)
+3
+Mr Thomas & Dr Tsai
+Snorkelling
+Melody
+K13
+D18
+A (Ms Poel)
+1
+Ms Poel & Ms Woollam
+Botanical Gardens (kayaking)
+Mick
+K13
+D9
+A (Ms Poel)
+3
+Mr Thomas & Dr Tsai
+Snorkelling
+Oliver
+K13
+D12
+C (Mr Thomas)
+3
+Mr Thomas & Dr Tsai
+Snorkelling
+Oscar
+K13
+D4
+B (Ms Tinnacher)
+2
+Ms Tinnacher & Ms Tum
+Muay Thai
+Oui
+K13
+D22
+B (Ms Tinnacher)
+2
+Ms Tinnacher & Ms Tum
+Muay Thai
+Pang
+K13
+GS5
+D (Dr Rafael)
+4
+Dr Rafael & Ms McDonald
+Beach Olympics
+Pretty
+K13
+D15
+B (Ms Tinnacher)
+2
+Ms Tinnacher & Ms Tum
+Muay Thai
+Puifai
+K13
+D15
+B (Ms Tinnacher)
+2
+Ms Tinnacher & Ms Tum
+Muay Thai
+Sky
+K13
+D22
+B (Ms Tinnacher)
+2
+Ms Tinnacher & Ms Tum
+Muay Thai
+Tungpang
+K13
+GS7
+A (Ms Poel)
+1
+Ms Poel & Ms Woollam
+Botanical Gardens (kayaking)
+Yuri
+K13
+D27
+C (Mr Thomas)
+3
+Mr Thomas & Dr Tsai
+Snorkelling
+Akira
+N13
+D9
+A (Ms Poel)
+3
+Mr Thomas & Dr Tsai
+Snorkelling
+Emmy
+N13
+D17
+A (Ms Poel)
+1
+Ms Poel & Ms Woollam
+Botanical Gardens (kayaking)
+Grace
+N13
+GS2
+D (Dr Rafael)
+4
+Dr Rafael & Ms McDonald
+Beach Olympics
+Idea
+N13
+D7
+A (Ms Poel)
+1
+Ms Poel & Ms Woollam
+Botanical Gardens (kayaking)
+Jean
+N13
+GS1
+D (Dr Rafael)
+4
+Dr Rafael & Ms McDonald
+Beach Olympics
+Ken N
+N13
+D22
+B (Ms Tinnacher)
+2
+Ms Tinnacher & Ms Tum
+Muay Thai
+Kezia
+N13
+GS5
+D (Dr Rafael)
+4
+Dr Rafael & Ms McDonald
+Beach Olympics
+Memee
+N13
+D17
+A (Ms Poel)
+1
+Ms Poel & Ms Woollam
+Botanical Gardens (kayaking)
+Mya
+N13
+D3
+B (Ms Tinnacher)
+2
+Ms Tinnacher & Ms Tum
+Muay Thai
+Namwaan
+N13
+D2
+B (Ms Tinnacher)
+2
+Ms Tinnacher & Ms Tum
+Muay Thai
+Otwo
+N13
+GS2
+D (Dr Rafael)
+4
+Dr Rafael & Ms McDonald
+Beach Olympics
+Peta
+N13
+D2
+B (Ms Tinnacher)
+2
+Ms Tinnacher & Ms Tum
+Muay Thai
+Prin
+N13
+D24
+C (Mr Thomas)
+3
+Mr Thomas & Dr Tsai
+Snorkelling
+Punn
+N13
+D21
+B (Ms Tinnacher)
+2
+Ms Tinnacher & Ms Tum
+Muay Thai
+Rasika
+N13
+GS1
+D (Dr Rafael)
+4
+Dr Rafael & Ms McDonald
+Beach Olympics
+San
+N13
+D13
+C (Mr Thomas)
+3
+Mr Thomas & Dr Tsai
+Snorkelling
+Sean
+N13
+D13
+C (Mr Thomas)
+3
+Mr Thomas & Dr Tsai
+Snorkelling
+Ai
+S13
+D27
+C (Mr Thomas)
+3
+Mr Thomas & Dr Tsai
+Snorkelling
+Aumi
+S13
+D9
+A (Ms Poel)
+3
+Mr Thomas & Dr Tsai
+Snorkelling
+Choochoo
+S13
+D4
+B (Ms Tinnacher)
+2
+Ms Tinnacher & Ms Tum
+Muay Thai
+Earn
+S13
+D3
+B (Ms Tinnacher)
+2
+Ms Tinnacher & Ms Tum
+Muay Thai
+Ellie
+S13
+GS8
+A (Ms Poel)
+1
+Ms Poel & Ms Woollam
+Botanical Gardens (kayaking)
+Fern
+S13
+D16
+B (Ms Tinnacher)
+2
+Ms Tinnacher & Ms Tum
+Muay Thai
+Heather
+S13
+D25
+C (Mr Thomas)
+3
+Mr Thomas & Dr Tsai
+Snorkelling
+Kitty
+S13
+GS2
+D (Dr Rafael)
+4
+Dr Rafael & Ms McDonald
+Beach Olympics
+Majah
+S13
+D2
+B (Ms Tinnacher)
+2
+Ms Tinnacher & Ms Tum
+Muay Thai
+Mat
+S13
+D29
+A (Ms Poel)
+1
+Ms Poel & Ms Woollam
+Botanical Gardens (kayaking)
+Mee
+S13
+GS4
+B (Ms Tinnacher)
+4
+Dr Rafael & Ms McDonald
+Beach Olympics
+Noopreme
+S13
+D15
+B (Ms Tinnacher)
+2
+Ms Tinnacher & Ms Tum
+Muay Thai
+Nump-Nump
+S13
+GS1
+D (Dr Rafael)
+4
+Dr Rafael & Ms McDonald
+Beach Olympics
+Pappim
+S13
+D25
+C (Mr Thomas)
+3
+Mr Thomas & Dr Tsai
+Snorkelling
+Poon
+S13
+D29
+A (Ms Poel)
+1
+Ms Poel & Ms Woollam
+Botanical Gardens (kayaking)
+Prim
+S13
+D27
+C (Mr Thomas)
+3
+Mr Thomas & Dr Tsai
+Snorkelling
+Ryu
+S13
+D9
+A (Ms Poel)
+3
+Mr Thomas & Dr Tsai
+Snorkelling
+Tata
+S13
+GS4
+B (Ms Tinnacher)
+4
+Dr Rafael & Ms McDonald
+Beach Olympics
+Aun
+So13
+D15
+B (Ms Tinnacher)
+2
+Ms Tinnacher & Ms Tum
+Muay Thai
+Kla So
+So13
+D8
+A (Ms Poel)
+1
+Ms Poel & Ms Woollam
+Botanical Gardens (kayaking)
+Krit
+So13
+D29
+A (Ms Poel)
+1
+Ms Poel & Ms Woollam
+Botanical Gardens (kayaking)
+Nammon
+So13
+D29
+A (Ms Poel)
+1
+Ms Poel & Ms Woollam
+Botanical Gardens (kayaking)
+Natasha
+So13
+D16
+B (Ms Tinnacher)
+2
+Ms Tinnacher & Ms Tum
+Muay Thai
+Otto
+So13
+GS3
+D (Dr Rafael)
+4
+Dr Rafael & Ms McDonald
+Beach Olympics
+Pat
+So13
+D3
+B (Ms Tinnacher)
+2
+Ms Tinnacher & Ms Tum
+Muay Thai
+Petch
+So13
+D20
+D (Dr Rafael)
+4
+Dr Rafael & Ms McDonald
+Beach Olympics
+Phu-Pha
+So13
+D8
+A (Ms Poel)
+1
+Ms Poel & Ms Woollam
+Botanical Gardens (kayaking)
+Pin D
+So13
+D24
+C (Mr Thomas)
+3
+Mr Thomas & Dr Tsai
+Snorkelling
+Pin T
+So13
+GS8
+A (Ms Poel)
+1
+Ms Poel & Ms Woollam
+Botanical Gardens (kayaking)
+Ploen
+So13
+D3
+B (Ms Tinnacher)
+2
+Ms Tinnacher & Ms Tum
+Muay Thai
+Pom
+So13
+D8
+A (Ms Poel)
+1
+Ms Poel & Ms Woollam
+Botanical Gardens (kayaking)
+Ranae
+So13
+D24
+C (Mr Thomas)
+3
+Mr Thomas & Dr Tsai
+Snorkelling
+Shan
+So13
+D7
+A (Ms Poel)
+1
+Ms Poel & Ms Woollam
+Botanical Gardens (kayaking)
+Taling
+So13
+D8
+A (Ms Poel)
+1
+Ms Poel & Ms Woollam
+Botanical Gardens (kayaking)
+Thank
+So13
+D26
+C (Mr Thomas)
+3
+Mr Thomas & Dr Tsai
+Snorkelling
+Tiger
+So13
+D31
+A (Ms Poel)
+1
+Ms Poel & Ms Woollam
+Botanical Gardens (kayaking)
+Tristan
+So13
+D12
+C (Mr Thomas)
+3
+Mr Thomas & Dr Tsai
+Snorkelling
+Wendy
+So13
+D26
+C (Mr Thomas)
+3
+Mr Thomas & Dr Tsai
+Snorkelling

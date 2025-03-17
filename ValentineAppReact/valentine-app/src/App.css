@@ -1,0 +1,32 @@
+:root {
+  --lightpink: #ffa0a0;
+}
+
+.formWrapper {
+  position: relative;
+  display: flex;
+  width: 350px;
+  height: auto;
+  justify-content: center;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: red;
+}
+
+#form {
+  background-color: green;
+}
+
+.btn {
+  font-size: 1.5rem;
+  background-color: var(--lightpink);
+  border-radius: 0.3rem;
+  appearance: unset;
+  transition: 0.2s ease;
+  margin: 0.5rem;
+}
+
+.btn:hover {
+  background-color: #ff8080;
+}

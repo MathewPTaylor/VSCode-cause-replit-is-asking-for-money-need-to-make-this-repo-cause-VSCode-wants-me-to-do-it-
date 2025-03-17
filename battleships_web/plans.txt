@@ -1,0 +1,5 @@
+PLANS FOR WEB BATTLESHIP:
+
+defining the mvp:
+- working battleship game that can be played on the WEB
+- able to handle many rooms
