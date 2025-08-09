@@ -1,5 +1,5 @@
 from battleshipapp import app, db
-from battleshipapp.model import Rooms
+from battleshipapp.model import *
 
 def create_all():
     with app.app_context():

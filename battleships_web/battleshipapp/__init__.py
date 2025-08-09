@@ -12,7 +12,7 @@ app.config['TEMPLATES_AUTO_RELOAD'] = True
 socket = SocketIO(app)
 db = SQLAlchemy(app)
 
-from battleshipapp.model import Rooms
+from battleshipapp.model import Rooms, Players
 
 
 ################
@@ -33,30 +33,52 @@ def check_room_exist(room_id):
     for room in rooms:
         print(room)
         if room_id == room.room_id:
-            return True
+            return room
     return False
 
 
+###############
+# AJAX Routes #
+###############
+
 @app.route("/checkGame", methods=["POST"])
 def check_handle():
+    print("[CHECK GAME START]")
     data_obj = request.get_json()
-    room_id = data_obj["GAME_ID"]
+    room_id = data_obj["ROOM_ID"]
 
     # check if room exists
-    room_exist = check_room_exist(room_id)
+    room = check_room_exist(room_id)
+    # rooms = db.session.query(Rooms).where()
 
-    if room_exist: # pending room exists
+    if room: # pending room exists
         # add user to room
         # whole shbang
-        print("ROOM EXISTS BRUH")
+        # redirect user to new room
+        print("[CHECK GAME] ROOMSSX", room)
+        print("[CHECK GAME] ROOM EXISTS BRUH")
     else:
         new_room = Rooms(room_id=room_id)
         db.session.add(new_room)
         db.session.commit()
 
-    
-    return False
+        # player = Players(user_id)
 
+    print("[CHECK GAME END]")
+    return json.dumps({"RETURN_VAL": False})
+
+def check_name_exist(name):
+    names = db.select(Players).where(Players.username == name)
+    
+
+@app.route("/checkNameAvailability", methods=["POST"])
+def check_name_handle():
+    json_data = request.get_json()
+    print("[CHECK NAME] JSON DATA", json_data)
+    username = json_data.get("USERNAME")
+    print("[CHECK NAME] USERNAME", username)
+
+    return json.dumps({"RETURN" : True})
 
 
 #################

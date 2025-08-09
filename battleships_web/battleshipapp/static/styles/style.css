@@ -55,3 +55,13 @@ h2 {
     margin: 0.5rem 0;
     padding: 0;
 }
+
+.input-error {
+    border: solid 2px red;
+}
+
+.errorName {
+    display: none;
+    color: red;
+    margin-top: 0;
+}

@@ -29,14 +29,14 @@ const NumberPad = ({onClick, onEqual, onAC, onMS, onM}: NPProps) => {
             <div className="col"><Button onClick={onClick} value="4">4</Button></div>
             <div className="col"><Button onClick={onClick} value="5">5</Button></div>
             <div className="col"><Button onClick={onClick} value="6">6</Button></div>
-            <div className="col"><Button onClick={onClick} value=" x ">x</Button></div>
+            <div className="col"><Button onClick={onClick} value=" * ">x</Button></div>
         </div>
 
         <div className="row crow justify-content-md-center">
             <div className="col"><Button onClick={onClick} value="1">1</Button></div>
             <div className="col"><Button onClick={onClick} value="2">2</Button></div>
             <div className="col"><Button onClick={onClick} value="3">3</Button></div>
-            <div className="col"><Button onClick={onClick} value=" ÷ ">÷</Button></div>
+            <div className="col"><Button onClick={onClick} value=" / ">÷</Button></div>
         </div>
 
         <div className="row crow justify-content-md-center">
