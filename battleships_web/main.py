@@ -1,5 +1,5 @@
-from battleshipapp import app, socket
+from battleshipapp import app, socketio
 
 
 if __name__ == "__main__":
-    socket.run(app, "0.0.0.0", port=3001, debug=True)
+    socketio.run(app, host="0.0.0.0", debug=True, port=3001, use_reloader=True)

@@ -3,3 +3,11 @@ PLANS FOR WEB BATTLESHIP:
 defining the mvp:
 - working battleship game that can be played on the WEB
 - able to handle many rooms
+
+
+
+What Ships?
+5-long ship X1
+4-long ship X1
+3-long ship X2
+2-long ship X1

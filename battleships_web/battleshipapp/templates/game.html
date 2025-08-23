@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battleships</title>
+    <link rel="stylesheet" href="../static/styles/style.css">
+    <link rel="stylesheet" href="../static/styles/game.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.4/socket.io.js"></script>
+</head>
+<body>
+    <script src="../static/scripts/game.js"></script>
+
+    <h1>This is Game Page</h1>
+
+    <button id="toggle">Toggle Telemetry</button>
+    <div id="collapsible" style="display: none;">
+        <h3>Username: {{ username }}</h2>
+        <h3>Game ID: {{ gid }}</h3>
+        <div id="message"></div>
+    </div>
+
+    <main id="mainContent">
+        <div id="gameWrapper" class="gameWrapper">
+            <div id="shipArmoury">
+            </div>
+            <div id="mainBoardWrapper">
+                <div id="opponentDiv" class="playerDiv">
+                    <div class="profile"></div>
+                    <div id="opponentNameContainer" class="nameContainer">
+                        <p id="opponentNameDisp">Opponent</p>
+                        <small class="smallDisp">Opponent</small>
+                    </div>
+                </div>
+                <div id="mainBoard" class="board">
+                    <div style="grid-area: 1 / 2 / 2 / -1; background-color: #123;" name="topRow-backing"></div>
+                    <div style="grid-area: 2 / 1 / -1 / 2; background-color: #123;"></div>
+                </div>
+                <div id="selfDiv" class="playerDiv">
+                    <div class="profile"></div>
+                    <div id="selfNameContainer" class="nameContainer">
+                        <p id="selfNameDisp">You</p>
+                        <small id="youText" class="smallDisp">You</small>
+                    </div>
+                </div>
+
+                <button class="confirm-btn">Confirm Ship Placement</button>
+            </div>
+            
+            <div id="targetBoardWrapper">
+                <div id="offenseDisp">Offense</div>
+                <div id="targetBoard" class="board">
+                    <div style="grid-area: 1 / 2 / 2 / -1; background-color: #123;" name="topRow-backing"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body> 
+</html>

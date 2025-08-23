@@ -14,9 +14,17 @@ class Rooms(db.Model):
 class Players(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     current_room = db.Column(db.Integer, db.ForeignKey("rooms.id"), nullable=False) # foreign key
-    user_sid = db.Column(db.String(20), nullable=False, unique=True)
+    user_sid = db.Column(db.String(20), nullable=True, unique=True)
     username = db.Column(db.String(20), nullable=False, unique=True)
-
+    
     def __repr__(self):
-        return f"Player({self.user_sid}, ROOM={self.current_room})"
+        return f"Player({self.username}, ROOM={self.current_room})"
 
+
+
+class Game(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    # room = db.Column(db.Integer, db.ForeignKey("rooms.id"), nullable=False)
+    room = db.Column(db.String(20), nullable=False)
+    state = db.Column(db.String, nullable=False) # will be a long JSON object string
+    

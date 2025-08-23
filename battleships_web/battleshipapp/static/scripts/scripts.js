@@ -10,8 +10,12 @@ $(document).ready(function() {
             
             e.preventDefault();
             
-            let username = document.getElementById("roomForm").querySelectorAll("input")[0].value;
+            let inputs = document.getElementById("roomForm").querySelectorAll("input");
+            console.log(inputs);
+            let username = inputs[0].value;
             let json_data = JSON.stringify({"USERNAME": username});
+            
+            window.sessionStorage.setItem("ROOM_ID", inputs[1].value);
             
             $.ajax({
                 url: "/checkNameAvailability",
@@ -58,7 +62,8 @@ $(document).ready(function() {
         try {
             let result = resultObj.RETURN;
             if (result) { // name is unique
-                  checkGame();
+                inputUnError();
+                checkGame();
             } else { // name is not unique
                 inputError();   
             }
@@ -84,8 +89,54 @@ $(document).ready(function() {
             contentType: "application/json",
             dataType: "json",
             data: JSON.stringify(dict),
-            // success: (data)=>{successHandle()},
+            success: (result)=>{successHandle(result)},
         });
+    }
+
+    function successHandle(result) {
+        let redirect = result.CAN_REDIRECT;
+        console.log(redirect);
+
+        if (redirect) {
+            console.log();
+            let path = "/game/" + window.sessionStorage.getItem("ROOM_ID");
+            // let path = "/game";
+            window.location.pathname = path;
+        } else {    
+            setLoadingIcon(true);
+            var yes = setInterval(()=>{
+                console.log("sent ajax.");
+                $.post("/checkPendingRoom").then((resp) => {
+                    data = JSON.parse(resp);
+                    console.log(`RESPONSE: ${resp}`);   
+
+                    if (data.RESULT) { // room has another player in it, ready to play
+                        setLoadingIcon(false);
+                        window.location.pathname = "/game/" + window.sessionStorage.getItem("ROOM_ID");  
+                        clearInterval(yes);
+                        console.log("INTERVAL CLEARED");
+                    }
+                }).fail((err) => {
+                    console.log(`ERROR: ${err}`);
+                    clearInterval(yes);
+                });
+            }, 5000)
+        }
+
+
+        // if successful redirect user to the game page
+        // if not, have frontend sending request every few seconds or so.
+    }
+
+    function setLoadingIcon(onOff) {
+        let loadingCircle = document.getElementById("loadingDiv");
+        if (onOff) {
+            loadingCircle.style.display = "block";
+            loadingCircle.classList.add("loading");
+        } else {
+            loadingCircle.style.display = "none";
+            loadingCircle.classList.remove("loading");
+        }
     }
 
     function inputError() {
@@ -96,7 +147,7 @@ $(document).ready(function() {
         errormessage.style.display = "block";
     }
 
-    function inputGood() {
+    function inputUnError() {
         let usernameInput = document.getElementById("roomForm").querySelector("input");
         usernameInput.classList.remove("input-error");
 

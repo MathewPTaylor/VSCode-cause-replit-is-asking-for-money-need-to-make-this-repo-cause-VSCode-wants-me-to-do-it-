@@ -45,9 +45,15 @@ h1 {
 }
 
 input {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
+    border: 2px solid #2a2a2a;
     border-radius: 0.25rem;
     margin: 0.5rem 0;
+    padding: 0.25rem;
+}
+
+input[type="submit"]:hover {
+    cursor: pointer;
 }
 
 h2 {
@@ -64,4 +70,39 @@ h2 {
     display: none;
     color: red;
     margin-top: 0;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#loadingDiv {
+    display: none;
+    height: 4em;
+    width: 4em;
+    background-color: transparent;
+    border: 5px solid transparent;
+    border-top: 5px solid white;
+    border-radius: 50%;
+    border-bottom: 5px solid white;
+}
+
+.loading {
+    animation-name: spin;
+    animation-timing-function: linear;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-delay: 0s;    
+    animation-fill-mode: forward;
+}
+
+.flexContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

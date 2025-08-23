@@ -18,10 +18,14 @@
 
     <form id="roomForm" class="form" action="#">
         <h2>Join a game</h2>
-        <input type="text" name="username" id="nameInput" placeholder="Enter player name">
+        <input type="text" name="username" id="nameInput" placeholder="Enter player name" required>
         <small class="errorName">Username already exists</small>
-        <input type="text" name="roomId" id="roomInput" placeholder="Enter room ID">
+        <input type="text" name="roomId" id="roomInput" placeholder="Enter room ID" required>
         <input type="submit" value="Find">
     </form>
+
+    <div id="loadingContainer" class="flexContainer">
+        <div id="loadingDiv" class=""></div>
+    </div>
 </body>
 </html>

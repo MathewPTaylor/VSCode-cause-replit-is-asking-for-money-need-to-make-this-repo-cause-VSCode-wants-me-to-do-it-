@@ -5,7 +5,7 @@ import InputWrapper from './components/InputWrapper';
 import axios from 'axios';
 import Main from './components/Main';
 // import REACT_APP_WEATHER_API_KEY from "./my.env"
-require("dotenv").config()
+// require("dotenv").config()
 
 // const API_KEY = process.env.REACT_APP_WEATHER_API_KEY;
 // alert(API_KEY); 

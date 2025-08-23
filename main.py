@@ -12,4 +12,4 @@ def tilt():
 
 
 if __name__ == "__main__":
-    app.run('0.0.0.0', port=81, debug=True, auto_reload=True)
+    app.run('0.0.0.0', port=81, debug=True, use_reloader=True)
