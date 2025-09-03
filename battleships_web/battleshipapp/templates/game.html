@@ -24,6 +24,11 @@
     <main id="mainContent">
         <div id="gameWrapper" class="gameWrapper">
             <div id="shipArmoury">
+                <div id="" class="ship-port"></div>
+                <div id="" class="ship-port"></div>
+                <div id="" class="ship-port"></div>
+                <div id="" class="ship-port"></div>
+                <div id="" class="ship-port"></div>
             </div>
             <div id="mainBoardWrapper">
                 <div id="opponentDiv" class="playerDiv">
@@ -43,14 +48,14 @@
                         <p id="selfNameDisp">You</p>
                         <small id="youText" class="smallDisp">You</small>
                     </div>
+                    <button class="confirm-btn disabled" id="shipConfirmBtn" disabled>Confirm Ship Placement</button>
                 </div>
-
-                <button class="confirm-btn">Confirm Ship Placement</button>
+                
             </div>
             
-            <div id="targetBoardWrapper">
-                <div id="offenseDisp">Offense</div>
-                <div id="targetBoard" class="board">
+            <div id="offenseBoardWrapper">
+                <div id="offenseBanner">Offense</div>
+                <div id="offenseBoard" class="board">
                     <div style="grid-area: 1 / 2 / 2 / -1; background-color: #123;" name="topRow-backing"></div>
                 </div>
             </div>

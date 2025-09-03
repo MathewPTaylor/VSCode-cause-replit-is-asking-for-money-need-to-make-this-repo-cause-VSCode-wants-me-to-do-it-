@@ -2,6 +2,8 @@ class BattleShip {
     constructor () {
         this.GameStart = false;
         this.cellSize = "";
+        this.currentSelect = null;
+        this.board = [];
     }
 
     getCellSize() {
@@ -10,6 +12,20 @@ class BattleShip {
         this.cellSize = cell.clientHeight;
     }
 }
+
+class Ships {
+    shipArr = [];
+
+    constructor (id, pos=null, length) {
+        this.id = id;
+        this.centerOfRotation = pos; 
+        this.rotation = 0; // using bearing system
+        this.bbox = []; // will contain coords that ship will take up
+        this.length = length;
+        Ships.shipArr.push(this);
+    }
+}
+
 
 $(document).ready(function() {
     var GAME = new BattleShip();
@@ -88,7 +104,7 @@ $(document).ready(function() {
             for (let i = 0; i < 10; i++) {
                 for (let c = 0; c < 10  ; c++) {
                     let sqrGrid = gridSqr.cloneNode();
-                    sqrGrid.id = `${i}${c}`
+                    sqrGrid.id = `${i}${c}`;
                     sqrGrid.style.gridArea = `${i+2} / ${c+2} / ${i+3} / ${c+3}`;
                     brd.appendChild(sqrGrid);
                     console.log("APPENDED!");
@@ -126,10 +142,60 @@ $(document).ready(function() {
         });
 
     }
+
+    //////////////////
+    // SHIP RELATED //
+    //////////////////
+
+    function deselectOthers() {
+        let armoury = document.getElementById("shipArmoury");
+        for (ship of armoury.children) {
+            if (ship.firstChild.id != GAME.currentSelect) {
+                ship.firstChild.classList.remove("selected");
+            }
+        }
+    }
+
+
+    function makeShips() {
+        let template = document.createElement("div");
+        template.style.width = "40px";
+        template.style.height = "40px";
+        template.style.backgroundColor = "red";
+
+        let armoury = document.getElementById("shipArmoury");
+        let child;
+
+        for (let i = 0; i < 5; i++) {
+            child = armoury.children[i];    
+
+            let c = template.cloneNode();
+            c.id = "ship" + (i + 1);
+            
+            c.addEventListener("click", (e)=>{
+                // changing what ship is currently selected, logic wise
+                GAME.currentSelect = GAME.currentSelect == e.target.id? null: e.target.id;
+
+                // adding the selected class to the selected ship. This will darken the ship to appear selected;
+                e.target.classList.add("selected");
+
+                // removing the selected class from other ships
+                deselectOthers();
+
+                console.log(GAME.currentSelect);
+            });
+
+            c.addEventListener("")
+
+            child.appendChild(c);
+        }
+    }
     
     addCoordinateIndicators();
 
     fillBoardSquares();
 
     GAME.getCellSize();
+
+    makeShips();
 });

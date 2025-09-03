@@ -177,6 +177,10 @@ def join_handle(data=None):
 
     
 
+@socketio.on("ready")
+def ready_handle(data):
+    # data will prolly be the board of the ships
+    pass
 
 
 

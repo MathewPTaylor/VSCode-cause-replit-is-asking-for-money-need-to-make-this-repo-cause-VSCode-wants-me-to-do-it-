@@ -11,3 +11,24 @@ What Ships?
 4-long ship X1
 3-long ship X2
 2-long ship X1
+
+
+Game state JSON Object iterating on said design:
+{
+    "MAIN_BOARD": {
+        "USER_1" : [], /* 2D Array */
+        "USER_2": []   /* 2D Array */
+    },
+
+    "MAIN_BOARD": {
+        "USER_1" : [], /* 2D Array */
+        "USER_2": []   /* 2D Array */
+    },
+
+    "HITS" : {
+        "USER_1": 0,
+        "USER_2:": 0
+    },
+
+
+}

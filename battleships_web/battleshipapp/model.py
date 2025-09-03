@@ -4,8 +4,9 @@ class Rooms(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     room_id = db.Column(db.String(20), nullable=False, unique=True)
     no_players = db.Column(db.Integer, nullable=False, unique=False, default=0)
-    # players = players will be a relationship
     players = db.relationship("Players", backref="rooms", lazy=True)
+    vacant = db.Column(db.Boolean, default=False)
+    game = db.relationship("Game", backref="rooms", lazy=True)
 
     def __repr__(self):
         return f"Room('{self.room_id}')"
