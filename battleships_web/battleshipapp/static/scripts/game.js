@@ -185,7 +185,7 @@ $(document).ready(function() {
                 console.log(GAME.currentSelect);
             });
 
-            c.addEventListener("")
+            // c.addEventListener("")
 
             child.appendChild(c);
         }
