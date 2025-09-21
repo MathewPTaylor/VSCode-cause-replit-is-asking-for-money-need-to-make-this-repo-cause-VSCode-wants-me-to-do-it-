@@ -28,6 +28,10 @@ def game(id):
         
     return render_template("game.html", username=session.get("USERNAME"), gid=id)
 
+@app.route("/rotate", methods=["get"])
+def rotate():
+    return render_template("rotate.html")
+
 
 def check_room_exist(room_id):
     query = db.select(Rooms)
@@ -177,10 +181,12 @@ def join_handle(data=None):
 
     
 
-@socketio.on("ready")
+@socketio.on("ready:gamestart")
 def ready_handle(data):
     # data will prolly be the board of the ships
-    pass
+    roomDB = get_room()
+    state_json = json.loads(roomDB.game.state)
+    print(state_json)
 
 
 

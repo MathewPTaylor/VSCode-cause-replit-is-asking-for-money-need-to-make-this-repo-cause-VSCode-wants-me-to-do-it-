@@ -13,6 +13,18 @@ What Ships?
 2-long ship X1
 
 
+things to fix:
+- grid column span reset, when ship is rotating
+- logic board reset, when ship is rotating
+- aircraft carrier height changing the height of the grid row when put onto grid
+- prevent player from dragging ship onto the offense board
+
+
+things to add:
+- logic to the rotation
+
+
+
 Game state JSON Object iterating on said design:
 {
     "MAIN_BOARD": {

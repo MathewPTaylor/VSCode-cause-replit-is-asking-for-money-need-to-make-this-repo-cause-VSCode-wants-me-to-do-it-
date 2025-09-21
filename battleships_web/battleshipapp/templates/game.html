@@ -23,12 +23,22 @@
 
     <main id="mainContent">
         <div id="gameWrapper" class="gameWrapper">
-            <div id="shipArmoury">
-                <div id="" class="ship-port"></div>
-                <div id="" class="ship-port"></div>
-                <div id="" class="ship-port"></div>
-                <div id="" class="ship-port"></div>
-                <div id="" class="ship-port"></div>
+            <div id="shipHolder" class="shipArmoury">
+                <div class="shipPort" ship-key="ship1">
+                    <img id="ship1" class="ship" src="../static/img/aircraft-carrier - Copy.png" alt="carrier">
+                </div>
+                <div class="shipPort" ship-key="ship2">
+                    <img id="ship2" class="ship" src="../static/img/battleship.svg" alt="battleship">
+                </div>
+                <div class="shipPort" ship-key="ship3">
+                    <img id="ship3" class="ship" src="../static/img/cruiserCopy.png" alt="cruiser">
+                </div>
+                <div class="shipPort" ship-key="ship4">
+                    <img id="ship4" class="ship" src="../static/img/cruiser.png" alt="cruiser">
+                </div>
+                <div class="shipPort" ship-key="ship5">
+                    <img id="ship5" class="ship" src="../static/img/copydestroyer - Copy.png" alt="destroyer">
+                </div>
             </div>
             <div id="mainBoardWrapper">
                 <div id="opponentDiv" class="playerDiv">
@@ -38,9 +48,13 @@
                         <small class="smallDisp">Opponent</small>
                     </div>
                 </div>
+                <div id="ontopBoard" class="test">
+                </div>
+
                 <div id="mainBoard" class="board">
                     <div style="grid-area: 1 / 2 / 2 / -1; background-color: #123;" name="topRow-backing"></div>
                     <div style="grid-area: 2 / 1 / -1 / 2; background-color: #123;"></div>
+                    <div id="templateSqr" style="grid-area: 1 / 1 / 2 / 2"></div>
                 </div>
                 <div id="selfDiv" class="playerDiv">
                     <div class="profile"></div>
@@ -48,7 +62,7 @@
                         <p id="selfNameDisp">You</p>
                         <small id="youText" class="smallDisp">You</small>
                     </div>
-                    <button class="confirm-btn disabled" id="shipConfirmBtn" disabled>Confirm Ship Placement</button>
+                    <button class="confirm-btn" id="shipConfirmBtn">Confirm Ship Placement</button>
                 </div>
                 
             </div>
@@ -61,5 +75,7 @@
             </div>
         </div>
     </main>
+    <button class="rotateBtn">Rotate</button>
+    <button class="checkBtn">Check</button>
 </body> 
 </html>

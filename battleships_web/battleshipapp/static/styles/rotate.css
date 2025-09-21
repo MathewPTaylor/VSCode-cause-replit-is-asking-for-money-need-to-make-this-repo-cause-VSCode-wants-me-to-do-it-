@@ -1,0 +1,64 @@
+html, body {
+    width: 100%;
+}
+
+.container {
+    display: flex;
+}
+
+.board {
+    display: grid;
+    width: 500px;
+    aspect-ratio: 1 / 1;
+    grid-template-columns: repeat(11, 1fr);
+    grid-template-rows: repeat(11, 1fr);
+    background-color: white;
+    border: solid black 2px;
+    gap: 1px;   
+}
+
+.shipHolder {
+    display: grid;
+    width: 200px;
+    height: 500px;
+    grid-template-rows: repeat(5, 1fr);
+    background-color: grey;
+    /* background-image: linear-gradient(#123, transparent); */
+}
+
+.shipHolder > * {
+    border: 0.1rem solid black;
+}
+
+.grid-sqr {
+    display: flex;
+    align-items: center;
+    background-color: #006;
+}
+
+.ship {
+    /* background-color: red; */
+    transition: 0.2s ease;
+}
+
+.ship:hover {
+    cursor: grab;
+}
+
+.rotateBtn {
+    border: none;
+    background-color: orange;
+    font-weight: bold;
+    padding: 0.5rem;
+    color: whitesmoke;
+    border-radius: 0.25rem;
+}
+
+.rotateBtn:hover {
+    cursor: pointer;
+    background-color: darkorange;
+}
+
+.dragging {
+    visibility: hidden;
+}

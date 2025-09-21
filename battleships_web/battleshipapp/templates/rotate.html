@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag Drop Testing</title>
+    <link rel="stylesheet" href="../static/styles/rotate.css">
+</head>
+<body>
+    <script src="../static/scripts/rotate.js"></script>
+    <h1>Drag Drop Testing</h1>
+    <button class="clicky">Click</button>
+    <div class="container">
+        <div id="shipHolder" class="shipHolder">
+            <div class="shipPort" ship-key="ship1">
+                <img id="ship1" class="ship" src="../static/img/aircraft-carrier - Copy.png" alt="carrier">
+            </div>
+            <div class="shipPort" ship-key="ship2">
+                <img id="ship2" class="ship" src="../static/img/battleship.svg" alt="battleship">
+            </div>
+            <div class="shipPort" ship-key="ship3">
+                <img id="ship3" class="ship" src="../static/img/cruiser.png" alt="cruiser">
+            </div>
+            <div class="shipPort" ship-key="ship4">
+                <img id="ship4" class="ship" src="../static/img/cruiser.png" alt="cruiser">
+            </div>
+            <div class="shipPort" ship-key="ship5">
+                <img id="ship5" class="ship" src="../static/img/copydestroyer - Copy.png" alt="destroyer">
+            </div>
+        </div>
+        <div id="mainBoard" class="board">
+            <div class="coordIndicator" name="topRow-backing" style="grid-area: 1 / 2 / 2 / -1; background-color: #111;"></div>
+            <div class="coordIndicator" name="sideCol-backing" style="grid-area: 2 / 1 / -1 / 2; background-color: #111;"></div>
+            <div id="templateSqr" style="grid-area: 1 / 1 / 2 / 2"></div>
+        </div>
+        <button class="rotateBtn">Rotate</button>
+    </div>
+</body>
+</html>

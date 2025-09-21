@@ -25,7 +25,7 @@ class Players(db.Model):
 
 class Game(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    # room = db.Column(db.Integer, db.ForeignKey("rooms.id"), nullable=False)
-    room = db.Column(db.String(20), nullable=False)
+    room = db.Column(db.Integer, db.ForeignKey("rooms.id"), nullable=False)
+    # room = db.Column(db.String(20), nullable=False)
     state = db.Column(db.String, nullable=False) # will be a long JSON object string
     
