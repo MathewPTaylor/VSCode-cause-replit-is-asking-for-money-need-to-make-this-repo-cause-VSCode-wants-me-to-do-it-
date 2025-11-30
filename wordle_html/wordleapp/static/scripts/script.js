@@ -46,7 +46,7 @@ $(document).ready(function() {
                 console.log(guesses, guesses * 5, i);
                 let square = document.getElementById("main").children[((guesses) * 5) + i];
                 square.classList.add("reveal");
-                square.classList.add(color_code[feedback[i]]);
+                setTimeout(square.classList.add(color_code[feedback[i]]), 700);
             }, 250 * i);
         }
         

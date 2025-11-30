@@ -24,10 +24,10 @@ const Main = ({data}) => {
                     <span>{data.metData.humidity}%</span>
                 </div>
 
-                <div className={`metInfo aqiInfo`}> {/*  epa${data.aqiData.USEpaIndex} */}
+                {/* <div className={`metInfo aqiInfo`}>  epa${data.aqiData.USEpaIndex} 
                     <img src="../src/assets/air-quality.png" alt="pm 2.5" title="PM2.5" width="30px" height="30px" className='mr-05'></img>
                     <span>{Math.round(data.aqiData.pm2_5)} <small style={{color: '#123'}}>US AQI*</small></span>
-                </div>
+                </div> */}
 
             </div>  
         </>

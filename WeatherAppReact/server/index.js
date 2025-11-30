@@ -44,10 +44,10 @@ function cherryPickWeather(weatherData) {
                 icon: weatherData.current.condition.icon
             }
         },
-        aqiData: {
-            pm2_5: weatherData.current.air_quality.pm2_5,
-            USEpaIndex: weatherData.current.air_quality["us-epa-index"]
-        }
+        // aqiData: {
+        //     pm2_5: weatherData.current.air_quality.pm2_5? weatherData.current.air_quality.pm2_5 : null,
+        //     USEpaIndex: weatherData.current.air_quality["us-epa-index"]? weatherData.current.air_quality["us-epa-index"] : null
+        // }
 
     }
     return returnObj
@@ -64,13 +64,17 @@ app.post("/api/get_weather", (req, res) => {
             weatherData = response.data;
             console.log("DATATAAAAA", weatherData);
         
-            const returnData = cherryPickWeather(weatherData);
+            const returnData = cherryPickWeather(require("../../weather.json"));
             console.log("RETURN DATA", returnData);
+
+            // returnData = require("../../weather.json");
 
             res.status(200).send({message: "RECEIVED", data: returnData});
         }).catch(e => {
-            console.log(e);
-            res.status(400).send({error: e.data});
+            const returnData = cherryPickWeather(require("../../weather.json"));
+            res.status(200).send({message: "RECEIVED", data: returnData});
+            // console.log(e);
+            // res.status(400).send({error: e.data});
         });
     } catch (e) {
         console.log(e);

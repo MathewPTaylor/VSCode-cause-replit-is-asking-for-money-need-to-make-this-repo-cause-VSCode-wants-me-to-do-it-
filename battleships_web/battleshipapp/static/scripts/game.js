@@ -369,6 +369,7 @@ $(document).ready(function() {
 
                 if (this.getAttribute("ship-key") == GAME.currentSelect.id) {
                     shipObj.resetDimensions(GAME.cellSize);
+                    GAME.currentSelect.width = "100%";
                     this.appendChild(GAME.currentSelect);
                     shipObj.placed = false;
                 }
