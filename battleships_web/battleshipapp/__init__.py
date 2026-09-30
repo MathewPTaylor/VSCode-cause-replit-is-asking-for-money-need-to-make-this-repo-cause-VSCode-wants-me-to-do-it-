@@ -8,7 +8,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///site.db"
 app.config['TEMPLATES_AUTO_RELOAD'] = True
 app.config['SECRET_KEY'] = "suckyourmumontuesdays"
 
-socketio = SocketIO(app, cors_allowed_origins="*", async_mode="eventlet")
+socketio = SocketIO(app, cors_allowed_origins="*") #, async_mode="eventlet")
 db = SQLAlchemy(app)
 
 

@@ -64,7 +64,8 @@ app.post("/api/get_weather", (req, res) => {
             weatherData = response.data;
             console.log("DATATAAAAA", weatherData);
         
-            const returnData = cherryPickWeather(require("../../weather.json"));
+            // const returnData = cherryPickWeather(require("../../weather.json"));
+            const returnData = cherryPickWeather(weatherData);
             console.log("RETURN DATA", returnData);
 
             // returnData = require("../../weather.json");
@@ -73,7 +74,7 @@ app.post("/api/get_weather", (req, res) => {
         }).catch(e => {
             const returnData = cherryPickWeather(require("../../weather.json"));
             res.status(200).send({message: "RECEIVED", data: returnData});
-            // console.log(e);
+            console.log(e);
             // res.status(400).send({error: e.data});
         });
     } catch (e) {
